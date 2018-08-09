@@ -1,0 +1,16 @@
+{
+  "name": "Unit_Testing_with_Nodejs",
+  "version": "1.0.0",
+  "description": "Node Unit Testing",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "request": "latest",
+    "mocha": "latest",
+    "chai": "latest"
+  },
+  "author": "",
+  "license": "ISC"
+}
