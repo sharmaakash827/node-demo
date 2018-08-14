@@ -8,13 +8,19 @@ describe("Test Scenario",function(){
 		});
 	});
 
-	it ("Test2", function(username='Samantha',email='Nathan@yesenia.net'){
+	it ("Test2", function(done){
+		let Requiredusername='Samantha',Requiredemail='Nathan@yesenia.net'
 		request("https://jsonplaceholder.typicode.com/users", function(error,response){
-		var obj=JSON.parse(response.body);
-		console.log(obj[0]["id"]);
-		
+			let obj=JSON.parse(response.body);
+
+			Object.keys(obj).forEach(function(key) {
+				if(obj[key]['username'] === Requiredusername){
+					assert.equal(Requiredemail, obj[key]["email"]);
+				}
+			});
+			done()
 		});
 
 	});
+
 });
-	
