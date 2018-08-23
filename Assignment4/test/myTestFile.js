@@ -18,10 +18,11 @@ describe("Test Scenario", function(res){
 			});
 	});
 
-	it('Test1', function(){
+	it('Test1', function(done){
 		//console.log(res.statusCode);
 		assert.equal(res.statusCode,300);
 		body = res.body;
+		done();
 	});
 
 	it('Test2', function(done){
@@ -31,8 +32,8 @@ describe("Test Scenario", function(res){
 			done();
 		}
 
-		let requiredUsername='Samantha',requiredEmail='Nathan@yesenia.net';
-		let obj=JSON.parse(body);
+		let requiredUsername = 'Samantha', requiredEmail = 'Nathan@yesenia.net';
+		let obj = JSON.parse(body);
 		//	console.log(response.body);
 		
 		Object.keys(obj).forEach(function(key) {
@@ -40,7 +41,7 @@ describe("Test Scenario", function(res){
 				assert.equal(requiredEmail, obj[key]["email"]);
 			}
 		});
-		done()
+		done();
 	});
 
 		
