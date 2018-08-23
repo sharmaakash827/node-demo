@@ -20,19 +20,24 @@ describe("Test Scenario", function(res){
 
 	it('Test1', function(){
 		//console.log(res.statusCode);
-		assert.equal(res.statusCode,200);
-		body=res.body
+		assert.equal(res.statusCode,300);
+		body = res.body;
 	});
 
 	it('Test2', function(done){
 		//console.log(res.body);
-		let requiredUsername='Samantha',requiredEmail='Nathan@yesenia.net'
+		if (body == null){
+			throw(Error);
+			done();
+		}
+
+		let requiredUsername='Samantha',requiredEmail='Nathan@yesenia.net';
 		let obj=JSON.parse(body);
 		//	console.log(response.body);
 		
 		Object.keys(obj).forEach(function(key) {
 			if(obj[key]['username'] === requiredUsername){
-				assert.equal(requiredEmail, obj[key]["email"])
+				assert.equal(requiredEmail, obj[key]["email"]);
 			}
 		});
 		done()
