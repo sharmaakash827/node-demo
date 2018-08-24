@@ -18,18 +18,17 @@ describe("Test Scenario", function(){
 			});
 	});
 
-	it('Test1', function(done){
+	it('Test1', function(){
 		//console.log(res.statusCode);
 		assert.equal(res.statusCode,200);
 		body = res.body;
-		done();
+		
 	});
 
-	it('Test2', function(done){
+	it('Test2', function(){
 		//console.log(res.body);
 		if (body == null){
 			throw(Error);
-			done();
 		}
 
 		let requiredUsername = 'Samantha', requiredEmail = 'Nathan@yesenia.net';
@@ -41,7 +40,6 @@ describe("Test Scenario", function(){
 				assert.equal(requiredEmail, obj[key]["email"]);
 			}
 		});
-		done();
 	});
 
 		
