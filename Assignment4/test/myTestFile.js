@@ -8,7 +8,7 @@ var options = {
 	resolveWithFullResponse : true
 };
 
-describe("Test Scenario", function(res){
+describe("Test Scenario", function(){
 	before(function(done){
 		rp(options)
 			.then(function(response){
@@ -20,7 +20,7 @@ describe("Test Scenario", function(res){
 
 	it('Test1', function(){
 		//console.log(res.statusCode);
-		assert.equal(res.statusCode,300);
+		assert.equal(res.statusCode,200);
 		body = res.body;
 	});
 
