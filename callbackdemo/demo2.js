@@ -1,30 +1,65 @@
 var request = require("request");
+var rp = require("request-promise");
 var fs = require("fs");
 var assert = require("chai").assert;
-var res,res1,res2 = null;
-var myRequestFunc = function(url1, url2, cb){
+var myRequestFunc =  async function(url1, url2, cb){
 
-	request(url1, function(err, res){
-		console.log(res.statusCode);
-		res1 = res.statusCode
-	});
+	request(url1, function(err, res1){
+		resCode1 = res1.statusCode;
 
-	request(url2, function(err, res){
-		console.log(res.statusCode);
-		res2 = res.statusCode
+		request(url2, function(err, res2){
+			resCode2 = res2.statusCode;
+
+			cb(resCode1,resCode2);
+
+		});
 	});
-	cb();
+/*
+	let option1 = {
+		uri : url1,
+		resolveWithFullResponse : true
+	}
+	let option2 = {
+		uri : url2,
+		resolveWithFullResponse : true
+	}
+	
+	let p1 = rp(option1).catch(function(err){
+		console.log("Error");
+	});
+	let p2 = rp(option2).catch(function(err){
+		console.log("Error");
+	});
+	
+	let result = await Promise.all([p1,p2])
+
+	resCode1 = result[0].statusCode;
+
+	resCode2 = result[1].statusCode;
+
+		
+	//console.log("callback:"+resCode1+" "+resCode2);
+	cb(resCode1,resCode2);
+*/
 }
 
 var cb = function(res1, res2){
-	if (assert.equal(res1, res2)){
-		res = "True";
+	try{
+		if (assert.equal(res1, res2) == undefined){
+		fs.writeFile("result.txt", "True", function(err){
+			if(err){ 
+				throw err;
+			}
+		});
+		}
 	}
-	else{
-		res = "False";
+	catch(Error){
+		fs.writeFile("result.txt", "False", function(err){
+			if(err){ 
+				throw err;
+			}
+		});
 	}
-	console.log(res);
-	fs.writeFile("result.txt", res)
 }
 
-myRequestFunc('https://www.google.com','http://www.google.com', cb);
+myRequestFunc('https://www.google.com','http://w.google.com', cb);
