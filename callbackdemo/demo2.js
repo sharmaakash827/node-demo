@@ -17,24 +17,26 @@ var myRequestFunc =  async function(url1, url2, cb) {
 /*-----Using request-promise module---------
 
     let option1 = {
-        uri : url1,
-        resolveWithFullResponse : true
+      uri : url1,
+      resolveWithFullResponse : true
     }
+    
     let option2 = {
-        uri : url2,
-        resolveWithFullResponse : true
+      uri : url2,
+      resolveWithFullResponse : true
     }
     
     let p1 = rp(option1).catch(function(err) {
-        return err;
+      return err;
     });
+    
     let p2 = rp(option2).catch(function(err) {
-        return err;
+      return err;
     });
+    
     let result = await Promise.all([p1,p2])
     resCode1 = result[0].statusCode;
-    resCode2 = result[1].statusCode;    
-  
+    resCode2 = result[1].statusCode;
     cb(resCode1,resCode2);
 }
 */
