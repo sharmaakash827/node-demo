@@ -7,13 +7,13 @@
   "globals_path" : "",
 
   "selenium" : {
-    "start_process" : false,
-    "server_path" : "./Selenium-server",
+    "start_process" : true,
+    "server_path" : "./selenium-server/selenium-server-standalone-3.14.0.jar",
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "",
-      "webdriver.gecko.driver" : "",
+      "webdriver.chrome.driver" : "./drivers/chromedriver",
+      "webdriver.gecko.driver" : "./drivers/geckodriver",
       "webdriver.edge.driver" : ""
     }
   },
@@ -48,8 +48,3 @@
   }
 }
 
-
-if (physical_visit):
-  do_not_ask_reason()
-else:
-  ask_reason()
