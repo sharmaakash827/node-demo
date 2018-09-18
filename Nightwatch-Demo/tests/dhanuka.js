@@ -1,7 +1,9 @@
 module.exports = {
   'Download Report Test' : function (browser) {
+   // console.log(browser);
     browser
       .url('http://203.110.85.168:8013')
+     // .login('1000','dhanuka@123')
       .waitForElementVisible('#ecn_no', 5000)
       .setValue('#ecn_no', '1000')
       .setValue('#password', 'dhanuka@123')
@@ -17,7 +19,6 @@ module.exports = {
       .setValue('input[name=StartDate]','2018-09-13')
       .setValue('input[name=EndDate]','2018-09-13')
       .useXpath()
-      //.click('//div[@class="row ng-star-inserted"]//button[@class="ui-autocomplete-dropdown ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ng-star-inserted"]/span[@class="ui-button-text ui-clickable"]')
       .click('//span[@class="ui-button-text ui-clickable"]')
       .waitForElementVisible('//li[@class="ui-autocomplete-list-item ui-corner-all"][1]/span',5000)
       .click('//li[@class="ui-autocomplete-list-item ui-corner-all"][1]/span')
@@ -25,6 +26,8 @@ module.exports = {
       .useCss()
       .click('button[type=submit]')
       .pause(10000)
-      .end();
+      .end()
+      ;
   }
 };
+
