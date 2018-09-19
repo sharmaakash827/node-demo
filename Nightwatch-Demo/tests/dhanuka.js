@@ -3,7 +3,7 @@ module.exports = {
    // console.log(browser);
     browser
       .url('http://203.110.85.168:8013')
-     // .login('1000','dhanuka@123')
+     //.login('1000','dhanuka@123')
       .waitForElementVisible('#ecn_no', 5000)
       .setValue('#ecn_no', '1000')
       .setValue('#password', 'dhanuka@123')
