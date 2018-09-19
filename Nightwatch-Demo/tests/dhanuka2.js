@@ -1,5 +1,5 @@
 module.exports = {
-  'Download Report Test' : function(browser){
+  'Download Report Test' : function (browser) {
     browser
     .url('http://203.110.85.168:8013')
     .login('1000','dhanuka@123') //This is the custom-command used here.
