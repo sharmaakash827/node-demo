@@ -26,8 +26,8 @@ module.exports = {
       .useCss()
       .click('button[type=submit]')
       .pause(10000)
-      .end()
-      ;
+      .end();
   }
+
 };
 

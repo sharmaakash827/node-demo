@@ -8,7 +8,7 @@ module.exports = {
       .click('input[type=submit]')
       .pause(1000)
       .assert.containsText('#main', 'Night Watch')
-      .
       .end()
+      
   }
 };
