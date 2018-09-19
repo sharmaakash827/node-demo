@@ -1,6 +1,6 @@
 module.exports = {
-	'Download Report Test' : function(something){
-		something
+	'Download Report Test' : function(browser){
+		browser
 			.url('http://203.110.85.168:8013')
 
 			// This is the custom command used here.
