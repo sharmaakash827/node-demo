@@ -1,8 +1,10 @@
 module.exports = {
   'Download Report Test' : function (browser) {
     browser
-    .url('http://203.110.85.168:8013')
+    .url(browser.launch_url)
+    .waitForElementVisible('#ecn_no', 5000)
     .login('1000','dhanuka@123') //This is the custom-command used here.
+    .assert.containsText('h3', 'Home Page')
     .useXpath()
     .click('//ul[@class="nav"]/li[5]/a')
     .click('//ul[@class="nav"]/li[5]/ul/li[1]/a')

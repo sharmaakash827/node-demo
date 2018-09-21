@@ -20,7 +20,7 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://localhost",
+      "launch_url" : "http://203.110.85.168:8013",
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
       "silent": true,
@@ -30,8 +30,10 @@
       },
       "desiredCapabilities": {
         "browserName": "firefox",
-        "marionette": true
+        "marionette": true,
+        "acceptSslCerts" : true
       }
+
     },
 
     "chrome" : {
