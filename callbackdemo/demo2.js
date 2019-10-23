@@ -14,6 +14,8 @@ var myRequestFunc =  async function(url1, url2, cb) {
 
     });
   });
+}
+
 /*-----Using request-promise module---------
 
     let option1 = {
@@ -40,6 +42,7 @@ var myRequestFunc =  async function(url1, url2, cb) {
     cb(resCode1,resCode2);
 }
 */
+
 var cb = function(res1, res2) {
   try{
     if (assert.equal(res1, res2) == undefined) {

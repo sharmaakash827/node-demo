@@ -1,5 +1,6 @@
 var file = require("fs");
 var request = require("request");
+var rp = require("request-promise");
 
 var myRequestFunc = function(url){
   return new Promise(function(resolve, reject){

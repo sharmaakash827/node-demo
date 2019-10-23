@@ -1,0 +1,13 @@
+{
+  "name": "puppeteer-demo",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "dependencies": {
+    "puppeteer-core": "latest",
+    "puppeteer": "latest",
+    "request": "latest",
+    "chai": "latest",
+    "env2": "latest"
+  }
+}
