@@ -1,14 +1,13 @@
 const puppeteer = require('puppeteer-core');
-var property = require('./properties.js')
- 
-function Base(){
-    return async function() {
-        try{
-            var browser = await puppeteer.launch(property);
-        }catch(e){
-            console.log(`${e}`);
-        }
-    };
-}
+const property = require ('./properties.js');
+
+async function Base() {
+  try {
+    const browser = await puppeteer.launch(property);
+    return browser;
+  }catch(e){
+    console.log(`${e}`);
+  }
+};
 
 module.exports = Base;
