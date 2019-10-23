@@ -4,7 +4,7 @@ function Animal(age) {
     this._age = age;
 }
 
-method.getAge = function() {
+method.getAge = function () {
     return this._age;
 };
 

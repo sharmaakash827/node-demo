@@ -3,14 +3,14 @@ var rp = require("request-promise");
 var fs = require("fs");
 var assert = require("chai").assert;
 
-var myRequestFunc =  async function(url1, url2, cb) {
-  request(url1, function(err, res1) {
+var myRequestFunc = async function (url1, url2, cb) {
+  request(url1, function (err, res1) {
     resCode1 = res1.statusCode;
 
-    request(url2, function(err, res2) {
+    request(url2, function (err, res2) {
       resCode2 = res2.statusCode;
 
-      cb(resCode1,resCode2);
+      cb(resCode1, resCode2);
 
     });
   });
@@ -43,19 +43,19 @@ var myRequestFunc =  async function(url1, url2, cb) {
 }
 */
 
-var cb = function(res1, res2) {
-  try{
+var cb = function (res1, res2) {
+  try {
     if (assert.equal(res1, res2) == undefined) {
-      fs.writeFile("result.txt", "True", function(err) {
-        if(err){
+      fs.writeFile("result.txt", "True", function (err) {
+        if (err) {
           throw err;
         }
       });
     }
   }
-  catch(Error){
-    fs.writeFile("result.txt", "False", function(err){});
+  catch (Error) {
+    fs.writeFile("result.txt", "False", function (err) { });
   }
 }
 
-myRequestFunc('https://www.google.com','http://www.google.com', cb);
+myRequestFunc('https://www.google.com', 'http://www.google.com', cb);
