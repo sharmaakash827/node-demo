@@ -1,14 +1,14 @@
 const puppeteer = require('puppeteer-core');
+var property = require('./properties.js')
+ 
+function Base(){
+    return async function() {
+        try{
+            var browser = await puppeteer.launch(property);
+        }catch(e){
+            console.log(`${e}`);
+        }
+    };
+}
 
-(async () => {
-    try {
-        const browser = await puppeteer.launch({
-            headless: false,
-            slowMo: 50,
-            executablePath: '/usr/bin/google-chrome'
-        });
-        const page = await browser.newPage();
-    } catch (e) {
-        console.log(`This is my Error : ${e}`);
-    }
-})();
+module.exports = Base;
