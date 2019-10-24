@@ -1,7 +1,6 @@
 /* add browser related properties here */
-properties = {
+module.exports = {
     headless: false,
-    slowMo: 50,
+    slowMo: 70,
     executablePath: '/usr/bin/google-chrome'
 }
-module.exports = properties;
