@@ -1,0 +1,17 @@
+module.exports = {
+  ECN_Selector : 'input[formcontrolname="empcode"]',
+  Name_Selector : 'input[formcontrolname="name"]',
+  Email_Selector : 'input[formcontrolname="email"]',
+  Dob_Selector : 'input[formcontrolname="dob"]',
+  Doj_Selector : 'input[formcontrolname="doj"]',
+  SecondaryEmail_Selector : 'input[formcontrolname="secondryemail"]',
+  Contact_Selector : 'input[formcontrolname="contact"]',
+  Imei_Selector : 'input[formcontrolname="imei"]',
+  Type_Selector : 'input[formcontrolname="type"]',
+  VehicleCode_Selector : 'input[formcontrolname="vehicle_code"]',
+  FlAppVersion_Selector : 'input[formcontrolname="app_ver"]',
+  Sp1Button_Selector : 'button[class="ui-autocomplete-dropdown ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ng-star-inserted"]',
+  SP1_Selector : '//ul/li/span[text()="19902 / ABHISHEK DHANUKA"]',
+  SubmitButton_Selector : '//button[text()=" Submit"]',
+  BackButton_Selector : '//button[text()=" Back to List"]',
+}

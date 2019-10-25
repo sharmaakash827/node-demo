@@ -5,9 +5,9 @@
   "author": "",
   "dependencies": {
     "puppeteer-core": "latest",
-    "puppeteer": "latest",
     "request": "latest",
     "chai": "latest",
-    "env2": "latest"
+    "env2": "latest",
+    "mocha": "latest"
   }
 }

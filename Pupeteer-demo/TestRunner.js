@@ -1,2 +1,8 @@
 var createEmployeeTest = require('./tests/createEmployeeTest');
-createEmployeeTest();
+//var assert
+
+(async () => {
+await createEmployeeTest();
+await browser.close();
+})();
+
