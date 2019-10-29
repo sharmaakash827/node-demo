@@ -1,7 +1,7 @@
-var Login = require('./loginTest');
-var Dashboard = require('../pages/locators/dashboard');
-var Employee = require('../pages/locators/employeeCard');
-var List = require ('../pages/locators/listPage');
+var Login = require('./login');
+var Dashboard = require('../locators/dashboard');
+var Employee = require('../locators/employeeCard');
+var List = require ('../locators/listPage');
 
 function getRandomArbitrary(min, max) { 
   let x = Math.floor(Math.random() * (max - min) + min); 

@@ -1,4 +1,4 @@
-var LoginSelector = require ('../pages/locators/login');
+var LoginSelector = require ('../locators/login');
 var assert = require('chai').assert;
 
 module.exports = async (username, password) => {
@@ -15,7 +15,8 @@ module.exports = async (username, password) => {
       {
         var [element_new] = await page.$x(LoginSelector.Error_Xpath_Selector);
         var text = (await element_new.getProperty('textContent')).jsonValue();
-        return text;           
+        return text;   
+                
       }else{
         return true;
       }
