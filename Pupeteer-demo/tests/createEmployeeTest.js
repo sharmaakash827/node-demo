@@ -9,7 +9,7 @@ function getRandomArbitrary(min, max) {
 }
 
 module.exports = async () => {
-  //console.log(page);
+
   try{
     await Login('1000', 'dhanuka@123');
     await page._click(Dashboard.Emp_Selector);
@@ -21,12 +21,12 @@ module.exports = async () => {
     await page.type(Employee.Email_Selector,"testmail"+num+"@test.com");
     await page.type(Employee.Contact_Selector, `${contact}`);
     await page._click(Employee.Sp1Button_Selector);
-    await page.clickOnXpath(Employee.SP1_Selector);
-    await page.clickOnXpath(Employee.SubmitButton_Selector);
+    await page.clickOnXpath(Employee.SP1_XpathSelector);
+    await page.clickOnXpath(Employee.SubmitButton_XpathSelector);
+    await 
+    await page.screenshot({path: './screenshots/createEmployee.png'});
 
   }catch(e){
     console.log(`CreateEmployeeTest Error: ${e}`);
   }  
 };
-
-// module.exports = CreateEmployeeTest;

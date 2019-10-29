@@ -11,7 +11,7 @@ module.exports = {
   VehicleCode_Selector : 'input[formcontrolname="vehicle_code"]',
   FlAppVersion_Selector : 'input[formcontrolname="app_ver"]',
   Sp1Button_Selector : 'button[class="ui-autocomplete-dropdown ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ng-star-inserted"]',
-  SP1_Selector : '//ul/li/span[text()="19902 / ABHISHEK DHANUKA"]',
-  SubmitButton_Selector : '//button[text()=" Submit"]',
-  BackButton_Selector : '//button[text()=" Back to List"]',
+  SP1_XpathSelector : '//ul/li/span[text()="19902 / ABHISHEK DHANUKA"]',
+  SubmitButton_XpathSelector : '//button[text()=" Submit"]',
+  BackButton_XpathSelector : '//button[text()=" Back to List"]',
 }

@@ -9,5 +9,8 @@
     "chai": "latest",
     "env2": "latest",
     "mocha": "latest"
+  },
+  "scripts": {
+    "test": "mocha --timeout 15000"
   }
 }
