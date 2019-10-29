@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer-core');
       executablePath: '/usr/bin/google-chrome'
     });
     const page = await browser.newPage();
-    await page.goto('http://203.122.16.232:8090', { waitUntil: 'networkidle2' });
+    await page.goto('http://203.110.85.168:8013/', { waitUntil: 'networkidle2' });
     await page.waitForSelector('input[formcontrolname="ecn_no"]');
     await page.type('input[formcontrolname="ecn_no"]', '111');
     await page.type('input[formcontrolname="password"]', 'Tftus@123');

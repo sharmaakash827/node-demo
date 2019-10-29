@@ -23,10 +23,11 @@ module.exports = async () => {
     await page._click(Employee.Sp1Button_Selector);
     await page.clickOnXpath(Employee.SP1_XpathSelector);
     await page.clickOnXpath(Employee.SubmitButton_XpathSelector);
-    await 
+    // await 
     await page.screenshot({path: './screenshots/createEmployee.png'});
+    return true;
 
-  }catch(e){
-    console.log(`CreateEmployeeTest Error: ${e}`);
+  }catch{
+    return false;
   }  
 };
