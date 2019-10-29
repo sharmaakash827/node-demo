@@ -11,6 +11,6 @@
     "mocha": "latest"
   },
   "scripts": {
-    "test": "mocha --timeout 15000"
+    "test": "mocha --timeout 15000 --file ./helpers/testSetup.js"
   }
 }

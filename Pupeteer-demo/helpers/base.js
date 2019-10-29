@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer-core');
 const properties = require ('../properties.js');
-const Commands = require('./custom_commands');
+const commands = require('./custom_commands');
 
 module.exports= async () => {
   try{      
@@ -8,7 +8,7 @@ module.exports= async () => {
     global.page = await browser.newPage();
     // page.setDefaultTimeout(20000);
     await page.goto('http://203.110.85.168:8013/',{waitUntil : 'networkidle2'});
-    await Commands();
+    await commands();
 
   }catch(e){
     console.log(`Base file Error: ${e}`)
