@@ -12,8 +12,8 @@ module.exports = async (username, password) => {
      
       if (exists)
       {
-        var [element_new] = await page.$x(loginSelector.Error_Xpath_Selector);
-        var text = (await element_new.getProperty('textContent')).jsonValue();
+        let [element] = await page.$x(loginSelector.Error_Xpath_Selector);// returns an array of object [{}]
+        let text = (await element.getProperty('textContent')).jsonValue();
         return text;   
                 
       }else{

@@ -8,9 +8,10 @@
     "request": "latest",
     "chai": "latest",
     "env2": "latest",
-    "mocha": "latest"
+    "mocha": "latest",
+    "file-system": "latest"
   },
   "scripts": {
-    "test": "mocha --timeout 15000 --file ./helpers/testSetup.js"
+    "test": "mocha --timeout 60000 --file ./helpers/testSetup.js"
   }
 }
